@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy_Songs</title>
+    <!-- <link rel="stylesheet" href="happy.css"> -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imageContainers = document.querySelectorAll(".image-container");
+    
+            imageContainers.forEach(function (container) {
+                const image = container.querySelector("img");
+                const text = container.querySelector(".image-text");
+    
+                // Add a click event listener to each image container
+                image.addEventListener("click", function () {
+                    if (text.style.display === "none" || text.style.display === "") {
+                        text.style.display = "block"; // Show the text
+                    } else {
+                        text.style.display = "none"; // Hide the text
+                    }
+                });
+            });
+        });
+    </script> -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            /* styles.css */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: black;
+            }
+
+            .image-container {
+                display: flex; 
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around; /* Space images evenly */
+                align-items: center; /* Vertically center images */
+                padding: 20px; /* Add some padding around the container */
+            }
+            /* .image-text {
+            display: none;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            padding: 5px;
+            }  */
+            img {
+                /* position: relative; */
+                width: 275px; /* Ensure images don't exceed their container width */
+                height: 300px ; /* Maintain image aspect ratio */
+                margin: 10px; /* Add margin between images */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to images */
+                border: 3px solid gray;
+                /* border-radius: 10px;  */
+                object-fit: contain;
+                object-position: center;
+                padding: 10px;
+                border-radius: 0.5rem;
+            }
+            img:hover {
+            transform: scale(1.1);
+        }
+            
+
+
+        /* body {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .image-container a {
+            text-decoration: none;
+        }
+        
+        img {
+            width: 300px;
+            height: auto;
+            margin: 5px;
+            border: 6px double black;
+            transition: transform 0.3s;
+        }
+        
+        img:hover {
+            transform: scale(1.1);
+        }
+        
+        .header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(black.jpg);
+            background-position: center;
+            background-size: cover;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        
+        .box {
+            box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+            transition: 1s;
+        } */
+    </style>
+    
+</head>
+
+<body>
+    <div class="image-container">
+        <!-- <div class="box"> -->
+            <a href="{{ url_for('happy_don') }}"><img src="https://resizing.flixster.com/BujhFldpZtrgnwafXp7-2yJG0wQ=/300x300/v2/https://flxt.tmsimg.com/assets/p164254_v_h9_aa.jpg"></a>
+            <a href="Final/happy/happy_ainvayi.html"><img src=https://imgs.search.brave.com/-fZIoj87QRRjuXCGKWooe6CtLpGPr-cOexWS-G16FcA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Zm9sbG93bHlyaWNz/LmNvbS9zdG9yYWdl/LzQzLzQyMzQ5Ny5q/cGc></a>
+            <a href="happy_jab.html"><img src=https://imgs.search.brave.com/osZn00Ytjd2u_6waGrK788zBOd8hYo-5oPaMLulMVvw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9yZXNp/emluZy5mbGl4c3Rl/ci5jb20vT0ZwRXJ4/RkkzcFFZZDQ0QWhG/YnlyTFp6RVQwPS8z/MDB4MzAwL3YyL2h0/dHBzOi8vZmx4dC50/bXNpbWcuY29tL2Fz/c2V0cy9wMTc0Njc4/X2tfaDlfYWQuanBn></a>
+            <a href="happy_radha.html"><img src=https://imgs.search.brave.com/7MOKIlDBkNZPNAYZrd45vIgJ2a1UP5O6QcYuPAMTwoQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLTAwMDAz/ODk1NzQxMy1jNXBr/a3ItdDUwMHg1MDAu/anBn></a>
+            <a href="happy_chikni.html"><img src=https://imgs.search.brave.com/AfMCHabAe7MqKdIGQDJ9Nasutk_A6rUfak0LTLrfgjk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8z/MTcvQWduZWVwYXRo/LUhpbmRpLTIwMTEt/MjAxOTA2MDMxMzI5/NDEtNTAweDUwMC5q/cGc></a>
+            <a href="happy_yjhd.html"><img src=https://imgs.search.brave.com/xJHJYgMGT8wY-govtWrfyYfIlx1Z8KiTmzz11RJveBQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wYWdh/bG5ldy5jb20vY292/ZXJpbWFnZXMvYWxi/dW0veWVoLWphd2Fh/bmktaGFpLWRlZXdh/bmktNTAwLTUwMC5q/cGc></a>
+            <a href="happy_tum.html"><img src=https://imgs.search.brave.com/gC4hbuvJBCjfxi28Hve1oX9StuRVHazxSdRF_5ElCxs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8x/MjUvQ29ja3RhaWwt/SGluZGktMjAxMi0y/MDIzMDQzMDA4MTcz/MS01MDB4NTAwLmpw/Zw></a>
+            <a href="happy_chote.html"><img src=https://imgs.search.brave.com/2JWFq54ow49p_nK_jz3cpDkwnBuZEGfDGaWUm_iar3Y/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jLnNh/YXZuY2RuLmNvbS8w/NzQvU29udS1LZS1U/aXR1LUtpLVN3ZWV0/eS1IaW5kaS0yMDE4/LTIwMTgwMjE0MTUz/OTQyLTUwMHg1MDAu/anBn></a>
+            <a href="happy_bom.html"><img src=https://imgs.search.brave.com/9fVr-IqV2gu2guVbragm1a00BwkuPEV7Pw5lm1T-1L0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wYWdh/bHNvbmcuaW4vdXBs/b2Fkcy8vdGh1bWJu/YWlscy8zMDB4MzAw/L2lkM1BpY3R1cmVf/MTk4MDE3MzQ2OS5q/cGc></a>
+            <a href="happy_roy.html"><img src=https://3.bp.blogspot.com/-McNXuq4vy-8/VUNllkkExJI/AAAAAAAAA3Q/MS6dAh3Bmc4/s1600/Roy-2015--bollytoSinhala.jpg></a>
+        <!-- </div> -->
+    </div>
+    
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy_Songs</title>
+    
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        /* background-image: linear-gradient(rgba(192, 190, 236, 0.5),rgba(224, 224, 235, 0.5)),url(Images/img4.png);
+        background-size: cover;
+        background-repeat: no-repeat; */
+    }
+
+    img{
+        width: 300px;
+        height: auto;
+        margin: 5px;
+        border: 6px double black;
+    }   
+
+    .img{
+        width: 500px;
+        height: 500px;
+        border: 4px solid black;
+        margin: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    }
+    .header{
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(235, 123, 188, 0.5),rgba(231, 96, 125, 0.5)),url(../static/img9.png);
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+        justify-content: center;
+        text-align: center;
+    }
+    .box{
+        box-shadow: 0 0 20px 2px rgba(0,0,0,0.1);
+        transition: 1s;
+    }
+    .box img:hover{
+        transform: scale(1.1);
+        z-index: 2;
+    }
+    </style>
+</head>
+
+<body>
+        <div class="header">
+            <div class="box">
+                <a href=""happy_"bg1.png"></a>
+                <a href="https://open.spotify.com/track/02MWAaffLxlfxAUY7c5dvx?autoplay=true"><img src="../static/Happy_Songs/bg2.png"></a>
+                <a href="https://open.spotify.com/track/3UGIZ8qcrMTwzLbx6Kttqt?autoplay=true"><img src="../static/Happy_Songs/bg14.png"></a>
+                <a href="https://open.spotify.com/track/3LnpBazWpD31QMTn6LgVGv?autoplay=true"><img src="../static/Happy_Songs/bg3.png"></a>
+                <a href="https://open.spotify.com/track/7yZcC4JIdQkXKaigJxrKSn?autoplay=true"><img src="../static/Happy_Songs/bg5.png"></a>
+                <a href="https://open.spotify.com/track/503OTo2dSqe7qk76rgsbep?autoplay=true"><img src="../static/Happy_Songs/bg7.png"></a>
+                <a href="https://open.spotify.com/track/5Z9KJZvQzH6PFmb8SNkxuk?autoplay=true"><img src="../static/Happy_Songs/bg8.png"></a>
+                <a href="https://open.spotify.com/track/1175r6ZmkUjX8dRJLz9Ohk?autoplay=true"><img src="../static/Happy_Songs/bg9.png"></a>
+                <a href="https://open.spotify.com/track/3UGIZ8qcrMTwzLbx6Kttqt?autoplay=true"><img src="../static/Happy_Songs/bg14.png"></a>
+                <a href="https://open.spotify.com/track/5HKxZt4NmNGpLotbPWm2IW?autoplay=true"><img src="../static/Happy_Songs/bg11.png"></a>
+                <a href="https://open.spotify.com/track/4fouWK6XVHhzl78KzQ1UjL?autoplay=true"><img src="../static/Happy_Songs/bg12.png"></a>
+                <a href="https://open.spotify.com/track/4GcmlWvhVYsb8vTEaq5492?autoplay=true"><img src="../static/Happy_Songs/bg13.png"></a>
+                
+            </div>
+        </div>
+    
+</body>
+</html> -->

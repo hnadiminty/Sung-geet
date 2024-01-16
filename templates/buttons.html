@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation System</title>
+    <link rel="stylesheet" href="static/button_style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Open Sans;
+    }
+    
+    .header {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 8%;
+        transition: background 1s;
+    }
+    
+    nav .logo {
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        font-weight: 600;
+        color: #FFF;
+    }
+    
+    nav .logo img {
+        width: 130px;
+        margin-right: 130px;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #FFF;
+        font-weight: 1000;
+        font-size: 20px;
+    }
+    
+    nav:hover .logo {
+        color: #333;
+    }
+    
+    nav:hover ul li a {
+        color: #f4efef;
+    }
+    
+    .content {
+        margin-top: 2%;
+        margin-left: 9%;
+        color: #FFF;
+    }
+    
+    .content h1 {
+        font-size: 100PX;
+        font-weight: 550;
+        line-height: 140px;
+    }
+    
+    .content p {
+        max-width: 500px;
+        line-height: 28px;
+        opacity: 0;
+    }
+    
+    .links {
+        margin-top: 30px;
+        opacity: 0;
+    }
+    
+    .links a {
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .links a:hover {
+        color: rgb(227, 227, 232);
+    }
+    
+    .btn:hover {
+        background-color: rgb(77, 110, 119);
+    }
+    
+    .btn {
+        border: 2px solid #fff;
+        padding: 10px 35px;
+        border-radius: 30px;
+        margin-top: 4%;
+        margin-right: 15px;
+        font-weight: 700;
+        font-size: 20px
+    }
+    
+    .slide-left {
+        animation: slideleft 1s linear forwards;
+    }
+    
+    .content h1 {
+        font-family: Georgia;
+    }
+    
+    @keyframes slideleft {
+        0% {
+            transform: translate(100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(0px);
+            opacity: 1;
+        }
+    }
+    
+    p.slide-left {
+        animation-delay: 1s;
+    }
+    
+    .links.slide-left {
+        animation-delay: 2s;
+        color: blue;
+        margin: 0px;
+        text-align: center;
+    }
+    
+    .output {
+        color: white;
+        font-family: "cursive"
+    }
+    
+    .output1 {
+        margin-top: 20px;
+        color: white;
+        display: inline-block;
+        font-family: "cursive"
+    }
+</style>
+
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo">
+                <img src="static/2.png" alt="">
+                <span>Sung-Geet</span>
+            </div>
+            <ul>
+                <li><a href="http://127.0.0.1:5000/">HOME</a></li>
+                <li><a href="http://localhost:5000/templates/join_page">TEAM-INFO</a></li>
+                <!-- <li><a href="#">SUPPORT</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- <h1 class="slide-left">Our <br> Website</h1>
+            <p class="slide-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div class="links slide-left"> -->
+
+            <div class="output">
+                {% if final_output %}
+                <h3 style="font-family:Georgia, 'Times New Roman', Times, serif; color: rgb(255, 255, 255);margin:20px;font:40px; font-size:35px">LET'S PLAY YOUR MOOD...</h3>
+                <h1 style="font-family: Lucida Handwriting; color: rgb(255, 255, 255);margin:5px;font: 70px; font-size:50px">You seem to be "{{final_output}}"</h1>
+                <h2 style="font-family:Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);font:40px; text-align: center;
+                    margin-top: 40px ;">What would you prefer ?</h2>
+                {% endif %}
+            </div>
+            <div class="button-container">
+                <a href="http://localhost:5000/movies/{{final_output}}" class="btn"><span>English</span></a>
+                <a href="http://localhost:5000/songs/{{final_output}}" class="btn"><span>Hindi</span></a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
